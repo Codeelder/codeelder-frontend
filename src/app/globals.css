@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: #171717;
+  color: #f5f5f5;
+}
+
+.font-poppins {
+  font-family: var(--font-poppins);
+}
+
+.font-crimson {
+  font-family: "Crimson Pro", serif;
+}
+
+.slide-right {
+  animation: slideRight 0.3s ease forwards;
+}
+
+.lineNavMenu {
+  animation: lineNavMenu 0.5s ease both;
+}
+
+.popup-container {
+  animation: popupOpen 0.5s ease-out;
+}
+
+@keyframes slideRight {
+  from {
+    transform: translateY(-20px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes lineNavMenu {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes popupOpen {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@media (min-width: 768px) {
+  .md\:lineNavMenu-none {
+    animation: none;
+  }
+}
